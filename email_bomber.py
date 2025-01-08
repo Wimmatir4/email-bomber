@@ -135,4 +135,4 @@ if __name__ == '__main__':
     bomb = EmailBomber()
     bomb.bomb()
     bomb.email(100)
-    bomb.attack(finiashed)
+    bomb.attack(finished)
