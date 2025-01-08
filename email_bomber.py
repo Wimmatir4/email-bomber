@@ -37,9 +37,9 @@ class EmailBomber:
         self.amount = None
         try:
             print(bColors.BLUE + '\n[+] Initializing bomber ...')
-            self.target = str(input(bColors.GREEN + '[:] Enter Target Email > '))
+            self.target = str(input(bColors.GREEN + '[:] Enter Target Email >wylma0145@gmail.com'))
             self.mode = int(input(bColors.GREEN + '[:] Enter BOMB mode (1,2,3,4) || 1:(1000) 2:(500) 3:(250) 4:('
-                                                  'custom) > '))
+                                                  'custom) >1'))
 
             if int(self.mode) > int(4) or int(self.mode) < int(1):
                 print(bColors.RED + '[-] ERROR: Invalid Option!')
