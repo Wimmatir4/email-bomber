@@ -88,10 +88,10 @@ class EmailBomber:
             elif self.server == '3':
                 self.server = 'smtp-mail.outlook.com'
 
-            self.fromAddr = str(input(bColors.GREEN + '[:] Enter attacker email address > '))
-            self.fromPwd = str(input(bColors.GREEN + '[:] Enter attacker password > '))
-            self.subject = str(input(bColors.GREEN + '[:] Enter subject > '))
-            self.message = str(input(bColors.GREEN + '[:] Enter message > '))
+            self.fromAddr = str(input(bColors.GREEN + '[:] Enter attacker email address >wylma0145@gmail.com'))
+            self.fromPwd = str(input(bColors.GREEN + '[:] Enter attacker password >Grindsman77!'))
+            self.subject = str(input(bColors.GREEN + '[:] Enter subject > 'SUBSCRIBE TO NEWSLETTER))
+            self.message = str(input(bColors.GREEN + '[:] Enter message >DO YOU THINK TRUMP HAS BETTER ENERGY POLICIES?'))
 
             if self.target == self.fromAddr:
                 print(bColors.RED + '\n[-] ERROR: Can\'t have same Attacker and Target address.')
@@ -134,5 +134,5 @@ if __name__ == '__main__':
     banner()
     bomb = EmailBomber()
     bomb.bomb()
-    bomb.email()
-    bomb.attack()
+    bomb.email(100)
+    bomb.attack(finiashed)
